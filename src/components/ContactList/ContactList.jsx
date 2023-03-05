@@ -9,6 +9,7 @@ import styles from './ContactList.module.scss';
 
 const ContactList = () => {
   const contacts = useSelector(visibleContacts);
+  console.log(contacts);
 
   return (
     <div className={styles.contactListContaoner}>

@@ -15,17 +15,19 @@ const initialValues = {
   number: '',
 };
 
-export const ContactForm = () => {
+const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
 
-  const handleSubmit = ({ name, number }, { resetForm }) => {
+  const handleSubmit = (values, { resetForm }) => {
     if (
-      contacts.find(option => option.name.toLowerCase() === name.toLowerCase())
+      contacts.find(
+        option => option.name.toLowerCase() === values.name.toLowerCase()
+      )
     ) {
-      return Notify.failure(`${name} is already in contacts`);
+      return Notify.failure(`${values.name} is already in contacts`);
     }
-    dispatch(addContact(name, number));
+    dispatch(addContact(values));
     resetForm();
   };
 
