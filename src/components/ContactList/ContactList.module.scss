@@ -9,7 +9,9 @@
   margin: 15px;
   color: white;
   max-height: 360px;
+}
 
+.scrollbar {
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -23,18 +25,3 @@
     border-radius: 5px;
   }
 }
-
-// .scrollbar {
-//   overflow-y: scroll;
-
-//   &::-webkit-scrollbar {
-//     width: 5px;
-//     background-color: rgba(26, 24, 47, 0.15);
-//     border-radius: 5px;
-//   }
-
-//   &::-webkit-scrollbar-thumb {
-//     background: #202f184f;
-//     border-radius: 5px;
-//   }
-// }

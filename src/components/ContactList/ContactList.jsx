@@ -10,15 +10,13 @@ const ContactList = () => {
   const contacts = useSelector(visibleContacts);
   console.log(contacts.length);
 
-  // const el = window.document.getElementById('contactList');
-
-  // if (contacts.length > 1) {
-  //   el.classList.add('scrollbar');
-  // }
-
   return (
     <div className={styles.contactListContainer}>
-      <ul id="contactList" className={styles.contactList}>
+      <ul
+        className={`${styles.contactList} ${
+          contacts.length > 1 ? styles.scrollbar : ''
+        }`}
+      >
         {contacts.length === 0 ? (
           <ContactListIsEmpty />
         ) : (
