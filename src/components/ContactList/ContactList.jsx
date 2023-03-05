@@ -15,8 +15,8 @@ const ContactList = () => {
       <ul className={styles.contactList}>
         {contacts.length === 0
           ? Notify.failure('Contacts list is empty!')
-          : contacts.map(({ id, name, phone }) => (
-              <ContactListItem key={id} id={id} name={name} phone={phone} />
+          : contacts.map(({ id, name, number }) => (
+              <ContactListItem key={id} id={id} name={name} number={number} />
             ))}
       </ul>
     </div>
