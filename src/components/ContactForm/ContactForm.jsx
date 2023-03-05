@@ -3,7 +3,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { getContacts } from 'redux/selectors';
 import { Formik, Form, Field } from 'formik';
 import { userSchema } from './Yup';
