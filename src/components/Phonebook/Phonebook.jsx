@@ -6,6 +6,7 @@ import { getError, getIsLoading } from 'redux/selectors';
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
 import ContactFilter from 'components/ContactFilter/ContactFilter';
+import Loader from 'components/Loader/Loader';
 
 import styles from './Phonebook.module.scss';
 
@@ -26,7 +27,7 @@ const Phonebook = () => {
           <ContactForm />
           <h2 className={styles.subTitle}>Contacts</h2>
           <ContactFilter />
-          {isLoading && !error && <b>Request in progress...</b>}
+          {isLoading && !error && <Loader />}
           <ContactList />
         </div>
       </div>
