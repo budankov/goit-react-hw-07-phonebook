@@ -21,9 +21,7 @@ const ContactForm = () => {
 
   const handleSubmit = (values, { resetForm }) => {
     if (
-      contacts.find(
-        option => option.name.toLowerCase() === values.name.toLowerCase()
-      )
+      contacts.find(el => el.name.toLowerCase() === values.name.toLowerCase())
     ) {
       return Notify.failure(`${values.name} is already in contacts`);
     }
